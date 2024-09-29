@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Robot Status Viewer</title>
+    <!-- 스타일 시트를 연결합니다 -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Robot Status Viewer</h1>
+
+      <!-- IP 주소 입력 필드 -->
+      <label for="ipAddress">IP Address</label>
+      <input type="text" id="ipAddress" value="192.168.45.50" />
+
+      <!-- 버튼들 -->
+      <div class="button-group">
+        <button id="jsonReadBtn">JSON Read</button>
+        <button id="ioStatusBtn">I/O Status</button>
+        <button id="estopStatusBtn">Estop Status</button>
+      </div>
+
+      <!-- 에러 메시지 표시 영역 -->
+      <div id="errorMessage"></div>
+
+      <!-- 맵 리스트 표시 영역 -->
+      <h2>Map List</h2>
+      <ul id="mapList"></ul>
+
+      <!-- I/O 상태 표시 영역 -->
+      <h2>I/O Status</h2>
+      <div id="ioStatus"></div>
+
+      <!-- Estop 상태 표시 영역 -->
+      <h2>Estop Status</h2>
+      <div id="estopStatus"></div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
